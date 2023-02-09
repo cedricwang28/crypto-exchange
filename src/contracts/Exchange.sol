@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity 0.8.17;
 
 import "./Token.sol";
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
@@ -167,7 +167,7 @@ contract Exchange {
 	}
 
 	//Fallback: reverts if ether is sent to this smart contract by mistake
-	function() external {
+	fallback() external{
 		revert();
 	}
 }
